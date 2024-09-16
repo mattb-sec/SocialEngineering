@@ -1,123 +1,166 @@
----
-layout: default
----
+# Introduction
 
-Text can be **bold**, _italic_, ~~strikethrough~~ or `keyword`.
+This lab is about attacking a firewall-protected site from the perspective of a hacker. Particularly, the lab will focus on the concentrated attack method and how it is done through means of social engineering and reverse social engineering.
 
-[Link to another page](./another-page.html).
+# Hands-On Demonstration
 
-There should be whitespace between paragraphs.
+## Targeted Social Engineering Attack
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+### Display whois.net results for Global Enterprises
 
-# Header 1
+This step uses whois.net to view the contact info for the target website, Global Enterprises. This is part of a series of steps taken in order to ensure that the attacker has the right target.
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+<p align="center">
+  <img width="980" height="560" src="assets/fig1.png">
+</p>
 
-## Header 2
+### Find the profile of potential social engineering target
 
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
+To get closer to the company, I find the profiles of several Global Enterprise employees on a business networking site. After reviewing several of the employees, I have determined that LouAnn Garfinkle is the best target because of her position, her previous occupation, and her unique name.
 
-### Header 3
+<p align="center">
+  <img width="980" height="560" src="assets/fig2.png">
+</p>
 
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
+### View information on LouAnne's blog
 
-```ruby
-# Ruby code with syntax highlighting
-GitHubPages::Dependencies.gems.each do |gem, version|
-  s.add_dependency(gem, "= #{version}")
-end
-```
+LouAnne’s profile stated that she has a blog she uses to discuss IT topics. The screenshot below shows a post she made about firewalls that could potentially be useful. She is careful not to state her employer on her blog, but we can infer that the practices she is discussing pertain to Global Enterprises.
 
-#### Header 4
+<p align="center">
+  <img width="980" height="560" src="assets/fig3.png">
+</p>
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+### View more information on LouAnne's blog
 
-##### Header 5
+LouAnne has a second blog post talking about how her workplace has a bring your own device policy and that support and security have been a nightmare. Knowing this could be useful for attack purposes.
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+### View release information for firewall
 
-###### Header 6
+Although we now know what firewall Global Enterprises is using, it is possible that they have upgraded the software to a newer release. A quick search on pfSense’s website reveals that there are indeed versions after 2.0. The most recent version appears to be 2.5.0.
 
-| head1        | head two          | three |
-|:-------------|:------------------|:------|
-| ok           | good swedish fish | nice  |
-| out of stock | good and plenty   | nice  |
-| ok           | good `oreos`      | hmm   |
-| ok           | good `zoute` drop | yumm  |
+<p align="center">
+  <img width="980" height="560" src="assets/fig4.png">
+</p>
 
-### There's a horizontal rule below this.
+# Applied Learning
 
-* * *
+In this next section, we switch targets. We now want to launch a social engineering attack on Corporation Techs, but also get burned while playing with fire.
 
-### Here is an unordered list:
+## Targeted Social Engineering Research
 
-*   Item foo
-*   Item bar
-*   Item baz
-*   Item zip
+### Display services of Corporation Techs
 
-### And an ordered list:
+This screenshot shows the services that are offered by Corporation Techs. They have an active call center that could potentially be exploited for information.
 
-1.  Item one
-1.  Item two
-1.  Item three
-1.  Item four
+<p align="center">
+  <img width="980" height="560" src="assets/fig5.png">
+</p>
 
-### And a nested list:
+### Identify the corporate officers of Corporate Techs
 
-- level 1 item
-  - level 2 item
-  - level 2 item
-    - level 3 item
-    - level 3 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-  - level 2 item
-- level 1 item
-  - level 2 item
-  - level 2 item
-- level 1 item
+This panel of the website shows the main officers in charge of Corporation Techs. Displaying their names and their sector of work will be useful in deciding who to target.
 
-### Small image
+<p align="center">
+  <img width="980" height="560" src="assets/fig6.png">
+</p>
 
-![Octocat](https://github.githubassets.com/images/icons/emoji/octocat.png)
+### Gather information about the officers using their LinkedIn profiles
 
-### Large image
+Andrew Symonds:
+-	Bachelor of Commerce from San Diego State University; years attended unknown
+-	Lives in Addison, Texas
+-	Worked the longest at Wodash Incorporated as a sales executive for thirteen years and eleven months
+Mike Hutchins:
+-	Bachelor’s in computer and information systems security/information assurance from Virginia Tech; attended from 1992 to 1996
+-	Lives in Addison, Texas
+-	Worked the longest at Aegis Secured as a security officer for seven years and four months
+ Dee Dasher:
+-	Bachelor’s in computer science from Texas State University; attended from 1985 to 1989
+-	Lives in Addison, Texas
+-	Worked the longest at Dante’s Inc under operations for eight years and seven months
 
-![Branching](https://guides.github.com/activities/hello-world/branching.png)
+### Display search results using Google's search operators
+
+This screenshot shows the search results that appear after using Google’s allintext search operator for Andrew Symonds and site for LinkedIn. Information is only shown if it appears in LinkedIn and mentions Andrew Symonds.
+
+<p align="center">
+  <img width="980" height="560" src="assets/fig7.png">
+</p>
+
+### Repeat the search with refined results and quotation operator
+
+The results are now more accurate due to consistently searching for things relevant to my target. The quotation operator has also been implemented to find anything having to do with security.
+
+<p align="center">
+  <img width="980" height="560" src="assets/fig8.png">
+</p>
+
+### Show confirmation email
+
+This screenshot is of the conformation email I received after sending a contact request.
+
+<p align="center">
+  <img width="980" height="560" src="assets/fig9.png">
+</p>
+
+### Get phished :(
+
+Despite my intention to phish this corporation, they were trying to phish me the whole time.
+
+<p align="center">
+  <img width="980" height="560" src="assets/fig10.png">
+</p>
+
+## Identify an Attack
+
+### Display results of Nmap scan
+
+This screenshot shows the command prompt after an Nmap scan was run on Corporation Tech’s website. The results show that port 80 is open and the web server is an Apache server. Nothing suspicious is found, but it may be worth noting that port 80 serves HTTP and is notoriously unsecure.
+
+<p align="center">
+  <img width="980" height="560" src="assets/fig11.png">
+</p>
+
+### Display whois information for suspicious IP
+
+In this part of the lab, I used IPNetInfo to take an IP making a suspicious number of requests and resolve it into whois data. The screenshot below shows this data.
+
+<p align="center">
+  <img width="980" height="560" src="assets/fig12.png">
+</p>
+
+### Find pricesheet.xlsx
+
+This screenshot shows the search results when attempting to find the pricesheet.xlsx sheet. It does not explicitly appear in the results,  but there is a sheet with a very similar name (pricecheat).
+
+<p align="center">
+  <img width="980" height="560" src="assets/fig13.png">
+</p>
+
+### Identify the script that opens pricecheat.pdf
+
+Returning to Corporation Tech’s homepage, I used inspect element in the debugger panel to find the script that opens the leaked file.
+
+<p align="center">
+  <img width="980" height="560" src="assets/fig14.png">
+</p>
+
+### Document actions taken to open the file
+
+The script tells the user to press alt + s. Doing so opens the price sheet. There is also another script for pressing ctrl + enter. However, this one leads to an invalid page.
+
+### Show results of script
+
+This screenshot shows the page that appears when ctrl + s is pressed.
+
+<p align="center">
+  <img width="980" height="560" src="assets/fig15.png">
+</p>
 
 
-### Definition lists can be used with HTML syntax.
+# Analysis and Discussion
 
-<dl>
-<dt>Name</dt>
-<dd>Godzilla</dd>
-<dt>Born</dt>
-<dd>1952</dd>
-<dt>Birthplace</dt>
-<dd>Japan</dd>
-<dt>Color</dt>
-<dd>Green</dd>
-</dl>
+Hackers perform reconnaissance on individuals before they attack because they want to find the most suitable target for social engineering. For instance, in section one, I had to look through several employee profiles until I found the best one. Although there were other potential candidates, the one closer to the bottom of the list showed to most promising results. Moreover, reconnaissance is done on these individuals so that the hacker knows how to social engineer them. Looking up their hobbies, families, affiliations, and so forth is a good way to come up with a phishing email.
 
-```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
-```
 
-```
-The final element.
-```
+
