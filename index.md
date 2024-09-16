@@ -70,11 +70,13 @@ Andrew Symonds:
 -	Bachelor of Commerce from San Diego State University; years attended unknown
 -	Lives in Addison, Texas
 -	Worked the longest at Wodash Incorporated as a sales executive for thirteen years and eleven months
+
 Mike Hutchins:
 -	Bachelor’s in computer and information systems security/information assurance from Virginia Tech; attended from 1992 to 1996
 -	Lives in Addison, Texas
 -	Worked the longest at Aegis Secured as a security officer for seven years and four months
- Dee Dasher:
+
+Dee Dasher:
 -	Bachelor’s in computer science from Texas State University; attended from 1985 to 1989
 -	Lives in Addison, Texas
 -	Worked the longest at Dante’s Inc under operations for eight years and seven months
